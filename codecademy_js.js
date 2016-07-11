@@ -36,6 +36,7 @@ var getToDaChoppa = function () {
 getToDaChoppa()
 */
 
+/*
 var cars = ['BMW', 'Volvo', 'Saab', 'Ford']
 var i = 0
 var arr = []
@@ -46,3 +47,73 @@ for (;cars[i];) {
 }
 
 console.log(arr.toString().replace(/,/g, ', '))
+*/
+
+/*
+var cars = ['BMW', 'Volvo', 'Saab', 'Ford']
+var str = ''
+
+for (var i = 0; i < cars.length; ++i) {
+  str += cars[i] + '\n'
+}
+
+var arr = str.split('\n').splice(0, 4)
+
+console.log(arr.toString().replace(/,/g, ', '))
+*/
+
+/*
+var isEven = function (number) {
+  if (isNaN(number)) {
+    return 'Is not a number, asshole!'
+  }
+  else if (number % 2 !== 0) {
+    return false
+  }
+  else { return true }
+}
+
+console.log(isEven('jjhj'))
+*/
+
+/*
+var cars = ['bmw', 'ford', 'benz', 'Jeep']
+var i = 0
+var arr = []
+
+for (;cars[i];) {
+  arr.push(cars[i].charAt(0).toUpperCase() + cars[i].slice(1))
+  ++i
+}
+
+console.log(arr)
+*/
+
+/*
+var fuck = 'fuck you'
+
+switch (fuck) {
+  case 'fucking fuck':
+    console.log('ff')
+    break
+  case 'fuck fuck fuck':
+    console.log('fff')
+    break
+  case 'fuck you':
+    console.log('fu')
+    break
+  default:
+    console.log('default')
+    break
+}
+*/
+
+var programming = false
+
+var happy = function () {
+  // Add your if/else statement here!
+  if (programming === false) { return true }
+  else { return false }
+}
+
+console.log(happy())
