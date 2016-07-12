@@ -108,6 +108,7 @@ switch (fuck) {
 }
 */
 
+/*
 var programming = false
 
 var happy = function () {
@@ -117,3 +118,5 @@ var happy = function () {
 }
 
 console.log(happy())
+*/
+

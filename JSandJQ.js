@@ -22,3 +22,9 @@ for (;scores[i];) {
 console.log(msg)
 */
 
+/*
+var age = 3
+var str = ['I\'m only', age, 'years old'].join(' ')
+
+console.log(str)
+*/
