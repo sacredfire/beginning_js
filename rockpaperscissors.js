@@ -1,4 +1,5 @@
 var userInput
+var verifiedInput
 var compPick
 
 var compScore = 0
@@ -9,9 +10,9 @@ game()
 
 function game () {
   userInput = prompt('Do you choose rock, paper or scissors?')
-  if (_verifyUserInput() === userInput) {
+  if (_verifyUserInput() !== 0) {
     document.write(_compChoice())
-    document.write(_compare(userInput, compPick))
+    document.write(_compare(verifiedInput, compPick))
     totalGames++
     document.write('Total games played: ' + totalGames + '</br>')
     document.write('Total score: comp ' + compScore + ' : ' + userScore + ' you' + '</br>' + '</br>')
@@ -24,16 +25,17 @@ function game () {
 
 function _verifyUserInput () {
   if (userInput === 'paper' || userInput === 'rock' || userInput === 'scissors') {
-    return userInput
-  //} else if (userInput === 'p') {
-  //  userInput = 'paper'
-  //  return userInput
-  //} else if (userInput === 'r') {
-  //  userInput = 'rock'
-  //  return userInput
-  //} else if (userInput === 's') {
-  //  userInput = 'scissors'
-  //  return userInput
+    verifiedInput = userInput
+    return verifiedInput
+  } else if (userInput === 'p') {
+    verifiedInput = 'paper'
+    return verifiedInput
+  } else if (userInput === 'r') {
+    verifiedInput = 'rock'
+    return verifiedInput
+  } else if (userInput === 's') {
+    verifiedInput = 'scissors'
+    return verifiedInput
   } else if (userInput === '') {
     return 0
   } else {
