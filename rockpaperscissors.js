@@ -24,23 +24,32 @@ function game () {
 }
 
 function _verifyUserInput () {
-  if (userInput === 'paper' || userInput === 'rock' || userInput === 'scissors') {
-    verifiedInput = userInput
-    return verifiedInput
-  } else if (userInput === 'p') {
-    verifiedInput = 'paper'
-    return verifiedInput
-  } else if (userInput === 'r') {
-    verifiedInput = 'rock'
-    return verifiedInput
-  } else if (userInput === 's') {
-    verifiedInput = 'scissors'
-    return verifiedInput
-  } else if (userInput === '') {
-    return 0
-  } else {
-    return 0
+  switch (userInput) {
+    case 'paper':
+      verifiedInput = 'paper'
+      break
+    case 'rock':
+      verifiedInput = 'rock'
+      break
+    case 'scissors':
+      verifiedInput = 'scissors'
+      break
+    case 'p':
+      verifiedInput = 'paper'
+      break
+    case 'r':
+      verifiedInput = 'rock'
+      break
+    case 's':
+      verifiedInput = 'scissors'
+      break
+    case '':
+      verifiedInput = '0'
+      break
+    default:
+      verifiedInput = '0'
   }
+  return verifiedInput
 }
 
 function _compChoice () {
