@@ -1,15 +1,41 @@
-var userChoice = prompt('Do you choose rock, paper or scissors?')
-var computerChoice = Math.random()
+//var userInput = prompt('Do you choose rock, paper or scissors?')
+var userInput = 'rock'
+var compPick = Math.random()
 
-if (computerChoice < 0.34) {
-  computerChoice = 'rock'
-} else if(computerChoice <= 0.67) {
-  computerChoice = 'paper'
-} else {
-  computerChoice = 'scissors'
-} console.log('Computer: ' + computerChoice)
+game()
 
-function compare (choice1, choice2) {
+function game () {
+  if (_verifyUserInput() === userInput) {
+    console.log(_compChoice())
+    console.log(_compare(userInput, compPick))
+  }
+  else {
+    console.log('Try again. You can only choose rock, paper or scissors.')
+    game()
+  }
+}
+
+function _verifyUserInput () {
+  if (userInput === 'paper' || userInput === 'rock' || userInput === 'scissors') {
+    return userInput
+  }
+  else {
+    return ''
+  }
+}
+
+function _compChoice () {
+  if (compPick < 0.34) {
+    compPick = 'rock'
+  } else if(compPick <= 0.67) {
+    compPick = 'paper'
+  } else {
+    compPick = 'scissors'
+  }
+  return ('Computer: ' + compPick)
+}
+
+function _compare (choice1, choice2) {
   if (choice1 === choice2) { return 'The result is a tie!' }
 
   else if (choice1 === 'rock') {
@@ -28,4 +54,3 @@ function compare (choice1, choice2) {
   }
 }
 
-compare(userChoice, computerChoice)

@@ -2,23 +2,12 @@ var text = 'Think about all the fucking possibilities. Design is all about fucki
 var arr = text.split(' ')
 var newArr = []
 
-/*
 function countWord (word) {
-  for (var i = arr.length - 1; i >= 0; i--) {
-    if (arr[i].match(word)) {
-      newArr.push(arr[i])
-    }
-  }
-  return newArr.length
-}*/
-
-function countWord (word) {
-  // var i = 0
+// for (var i = arr.length - 1; i >= 0; i--) {
   for (var i = 0; arr[i]; ++i) {
     if (arr[i].match(word)) {
       newArr.push(arr[i])
     }
-    // ++i
   }
   return newArr.length
 }
