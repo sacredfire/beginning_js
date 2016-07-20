@@ -18,6 +18,8 @@ function list (obj) {
   }
 }
 
+list(friends)
+
 function search (name) {
   for (var key in friends) {
     if (friends[key].firstName === name) {
@@ -27,5 +29,11 @@ function search (name) {
   }
 }
 
-list(friends)
 search('Steve')
+
+function list1 (obj) {
+  console.log(Object.keys(obj))
+}
+
+list1(friends)
+
