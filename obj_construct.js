@@ -37,7 +37,7 @@ console.log(mango.hasOwnProperty('fixedProp'))
 
 // — An own property is defined directly on the object itself, for example:
 // Let’s create an object first:
-// var aMango = new Fruit ();
+// var aMango = new Fruit ()
 // Now we define the mangoSpice property directly on the aMango object
 // Because we define the mangoSpice property directly on the aMango object,
 // it is an own property of aMango, not an inherited property.
@@ -77,3 +77,46 @@ console.log('toString' in someFruit)  // true
 // Prints false because the property was inherited from prototype
 console.log(someFruit.hasOwnProperty('nativeToLand')) // false
 
+function HigherLearning () {
+  this.educationLevel = 'University'
+}
+
+HigherLearning.prototype.educationLevel2 = 'University 2' // not enumarable
+
+var school = new HigherLearning ()
+school.schoolName = 'MIT'
+school.schoolAccredited = true
+school.schoolLocation = 'Massachusetts'
+
+// Use of the for/in loop to access the properties in the school object
+for (var eachItem in school) {
+  console.log(eachItem)
+  // Prints educationLevel, schoolName, schoolAccredited, and schoolLocation
+}
+
+console.log(school.hasOwnProperty('educationLevel')) // true
+console.log(school.hasOwnProperty('educationLevel2')) // false
+
+console.log(school)
+// HigherLearning {
+//   educationLevel: 'University',
+//   schoolName: 'MIT',
+//   schoolAccredited: true,
+//   schoolLocation: 'Massachusetts' }
+console.log(school.educationLevel2)
+// University 2
+
+// JSON.stringify and parse
+
+console.log(JSON.stringify(school))
+
+var str = JSON.stringify(school, null, 2)
+console.log(str)
+
+var obj = JSON.parse(str)
+
+console.log(obj)
+
+console.log(obj.educationLevel2) // undefined
+
+console.log(obj === school) // false
