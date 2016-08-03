@@ -33,15 +33,25 @@ console.log(aBanana.name) // Banana
 // Uses the showNameAndColor method from the Fruit object prototype, which is
 // Plant.prototype. The aBanana object inherits all the properties and methods
 // from both the Plant and Fruit functions.
-console.log(aBanana.showNameAndColor()) // I am a Banana and my color is yellow
-// undefined ??
-console.log(aBanana.amIOrganic()) // I am organic, Baby!
-// undefined ??
+aBanana.showNameAndColor() // I am a Banana and my color is yellow
+aBanana.amIOrganic() // I am organic, Baby!
 
 console.log(aBanana.country) // Mexico
-
 console.log(aBanana.constructor) // [Function: Plant] why not Fruit?
-
 console.log(aBanana.hasOwnProperty('name'))
 console.log(aBanana.hasOwnProperty('amIOrganic'))
 
+// using Object.create()
+
+var anApple = Object.create(Plant, {
+  'name': {
+    value: 'Apple',
+    enumerable: true // writable:false, configurable(deletable):false by default
+  },
+  'color': {
+    value: 'Green',
+    enumerable: true
+  }
+})
+
+console.log(anApple)
