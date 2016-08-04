@@ -20,3 +20,15 @@ var moscow = new City('Moscow', 'Large', 'Russia', ['Tverskaya', 'Yamskaya'])
 moscow.whichCountry()
 
 moscow.listStreets()
+
+console.log(moscow.hasOwnProperty('listStreets'))
+console.log('listStreets' in moscow)
+
+console.log(moscow.size !== undefined)
+
+for (var key in moscow) {
+  console.log(key + ': ' + moscow[key])
+}
+
+console.log(Object.keys(moscow))
+console.log(Object.getOwnPropertyNames(moscow))
