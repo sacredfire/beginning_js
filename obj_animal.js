@@ -15,8 +15,6 @@
 // penguin.sayName()
 
 
-
-
 function Animal (name, numLegs) {
   this.name = name
   this.numLegs = numLegs
