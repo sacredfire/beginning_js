@@ -55,3 +55,5 @@ var anApple = Object.create(Plant, {
 })
 
 console.log(anApple)
+
+console.log(Object.keys(Fruit))
