@@ -23,3 +23,6 @@ console.log(john)
 
 john.age = -2
 console.log(john)
+
+console.log(Object.getOwnPropertyDescriptor(john, 'name'))
+console.log(Object.getOwnPropertyDescriptor(john, 'age'))

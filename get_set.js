@@ -21,3 +21,7 @@ book.year = 2007
 
 console.log(book.year)
 console.log(book.edition)
+
+console.log(Object.getOwnPropertyDescriptor(book, 'year'))
+console.log(Object.getPrototypeOf(book))
+console.log(Object.prototype.isPrototypeOf(book))

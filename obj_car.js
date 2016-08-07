@@ -100,3 +100,21 @@ trailer0.canDriveMe(bob)
 car1.canDriveMe(bill)
 truck1.canDriveMe(bill)
 trailer0.canDriveMe(bill)
+
+console.log(Object.getOwnPropertyDescriptor(car2, 'make'))
+
+console.log(Object.getPrototypeOf(car0))
+console.log(Object.getPrototypeOf(truck0))
+console.log(Object.getPrototypeOf(trailer0))
+
+console.log(Car.prototype.isPrototypeOf(car0))
+console.log(Truck.prototype.isPrototypeOf(car0))
+console.log(TractorTrailer.prototype.isPrototypeOf(car0))
+
+console.log(Car.prototype.isPrototypeOf(truck0))
+console.log(Truck.prototype.isPrototypeOf(truck0))
+console.log(TractorTrailer.prototype.isPrototypeOf(truck0))
+
+console.log(Car.prototype.isPrototypeOf(trailer0))
+console.log(Truck.prototype.isPrototypeOf(trailer0))
+console.log(TractorTrailer.prototype.isPrototypeOf(trailer0))
