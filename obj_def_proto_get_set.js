@@ -7,8 +7,6 @@ Object.defineProperty(Person.prototype, 'age', {
   get: function () {
     return this._age
   },
-
-  // Added a few things to demonstrate additional logic on the setter
   set: function (num) {
     num = parseInt(num, 10)
     if (num > 0) {
