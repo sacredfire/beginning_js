@@ -15,9 +15,27 @@ Fruit1.prototype.nativeTo = function () {
 
 var someFruit = new Fruit1()
 
-for (var key in someFruit) {
-  console.log(someFruit[key])
-}
-
 someFruit.showName()
 someFruit.nativeTo()
+
+for (var key in someFruit) {
+  console.log(key + ' : ' + someFruit[key])
+}
+
+var keys = (Object.keys(someFruit))
+console.log(keys)
+console.log(Object.getOwnPropertyNames(someFruit))
+
+console.log(Object.getPrototypeOf(someFruit))
+
+console.log(Object.getOwnPropertyNames(Fruit1.prototype))
+console.log(Object.getOwnPropertyDescriptor(Fruit1.prototype, 'color'))
+console.log(Object.getOwnPropertyDescriptor(Fruit1.prototype, 'showName'))
+
+var keys = Object.getOwnPropertyNames(Fruit1.prototype)
+var keyValuesPairs = []
+for (var i = 0; keys[i]; ++i) {
+  keyValuesPairs.push(keys[i] + ' : ' + Fruit1.prototype[keys[i]])
+}
+
+console.log(keyValuesPairs)

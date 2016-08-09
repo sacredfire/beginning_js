@@ -14,3 +14,5 @@ var arr3 = arr1.map(function (x) {
   return x * x
 })
 console.log(arr3)
+
+console.log(arr)
