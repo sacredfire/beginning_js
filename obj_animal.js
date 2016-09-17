@@ -24,5 +24,15 @@ function Emperor (name) {
 }
 Emperor.prototype = new Penguin()
 
-emperor = new Emperor()
+var emperor = new Emperor()
 console.log(emperor.numLegs)
+
+var newPenquin = new Penguin('Fucker', 2)
+
+newPenquin.sayName()
+
+for (var props in newPenquin) {
+  console.log(newPenquin[props])
+}
+
+console.log(Object.keys(newPenquin))
