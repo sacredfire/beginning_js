@@ -19,4 +19,3 @@ console.log(arr2 === arr3)
 console.log(arr2[0] === arr3[0])
 console.log(arr2[1] === arr3[1])
 console.log(arr2[2] === arr3[2])
-
