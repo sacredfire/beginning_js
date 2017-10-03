@@ -1,7 +1,7 @@
 var foo = []
 var foo1 = []
-var sum = 0
-var sum1 = 0
+// var sum = 0
+// var sum1 = 0
 var delta = 0
 
 for (var i = 1; i <= 2001; i++) {
@@ -10,9 +10,11 @@ for (var i = 1; i <= 2001; i++) {
   }
 }
 
-for (var y = 0; y < foo.length; y++) {
-  sum = sum + foo[y]
-}
+var sum = foo.reduce((a, b) => a + b, 0)
+
+// for (var y = 0; y < foo.length; y++) {
+//   sum = sum + foo[y]
+// }
 
 for (var l = 1; l <= 2001; l++) {
   if (l % 2 !== 0) {
@@ -20,9 +22,11 @@ for (var l = 1; l <= 2001; l++) {
   }
 }
 
-for (var d = 0; d < foo1.length; d++) {
-  sum1 = sum1 + foo1[d]
-}
+var sum1 = foo1.reduce((a, b) => a + b, 0)
+
+// for (var d = 0; d < foo1.length; d++) {
+//   sum1 = sum1 + foo1[d]
+// }
 
 console.log('even arr sum =', (sum))
 console.log('odd arr sum =', (sum1))
