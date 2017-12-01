@@ -39,7 +39,7 @@ if (sum < sum1) {
   console.log('even arr sum is bigger than odd arr sum by', (delta))
 } */
 
-var arr12_40 =[]
+var arr12_40 = []
 
 for (var h = 12; h < 41; h++) {
   arr12_40.push(h)
@@ -51,9 +51,9 @@ console.log(arr12_40[11])
 function multiply (array) {
   var sum = 1
   for (var i = 0; i < array.length; i++) {
-    sum = sum * array[i];
+    sum = sum * array[i]
   }
-  return sum;
+  return sum
 }
 
 console.log(multiply(arr12_40))
