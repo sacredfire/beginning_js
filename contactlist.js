@@ -36,4 +36,3 @@ function list1 (obj) {
 }
 
 list1(friends)
-
